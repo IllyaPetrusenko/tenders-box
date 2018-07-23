@@ -1,11 +1,9 @@
 from monitoring.key import *
+import json
 
 headers1 = {'authorization': 'Basic {}'.format(ds_key)}
 
 doc_service_url = 'https://upload.docs-sandbox.openprocurement.org/upload'
-
-
-files = {'file': open('/home/qa1/Изображения/146796919019803402.png', 'rb')}
 
 
 url = 'https://audit-api-sandbox.prozorro.gov.ua/api/2.4/monitorings'
@@ -69,13 +67,7 @@ def decision(documents):
         }
       }
     }
-    return payload2
-
-activate = {
-  "data": {
-    "status": "active"
-  }
-}
+    return json.dumps(payload2)
 
 msg = {
   "data": {
@@ -124,36 +116,6 @@ def conclusion(violation, documents = 0):
         }
     return conclusion_cont
 
-adressed = {
-  "data": {
-    "status": "addressed"
-  }
-}
-
-
-stopped = {
-  "data": {
-    "status": "stopped",
-    "cancellation": {
-      "relatedParty": "be546d6519ee37a597df5c1ca71ddd18",
-      "description": "Complaint was created"
-    }
-  }
-}
-
-
-complete = {
-  "data": {
-    "status": "completed"
-  }
-}
-
-
-decline = {
-  "data": {
-    "status": "declined"
-  }
-}
 
 eliminationResolution = {
   "data": {
@@ -169,13 +131,27 @@ eliminationResolution = {
   }
 }
 
+
+#status = [, 'stopped']
+
 def monitoring_status(status):
 
-    mon_status = {
-  "data": {
-    "status": status
-  }
-}
-    return mon_status
+    if status != 'stopped':
+        mon_status = {
+            "data": {
+                "status": status
+            }
+        }
 
-print(monitoring_status('active'))
+    else:
+        mon_status = {
+            "data": {
+                "status": 'stopped',
+                "cancellation": {
+                    "relatedParty": "be546d6519ee37a597df5c1ca71ddd18",
+                    "description": "Complaint was created"
+                }
+            }
+        }
+
+    return json.dumps(mon_status)

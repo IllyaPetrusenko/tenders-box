@@ -1,6 +1,6 @@
 import requests, json
 from monitoring.test_data import *
-
+from monitoring.files_mon import *
 
 def send_file_to_doc_service():
 
@@ -14,17 +14,18 @@ def draft_monitoring():
 
     monitoring = requests.post(url, data=json.dumps(payload), headers=headers)
     monitoring_id = monitoring.json()['data']['id']
-    monitoring_good = monitoring.json()['data']['monitoring_id']
-    return monitoring_id, monitoring_good
+    return monitoring_id
 
 
 # New monitoring + activation
 def active_monitoring():
 
-    monitoring_id = '89fdc6a2aa714cfbb26ae70c1d5a9507'
-    requests.patch(url + '/' + monitoring_id, data=json.dumps(decision(documents)), headers=headers)
-    resp = requests.patch(url + '/' + monitoring_id, data=json.dumps(activate), headers=headers)
-    return resp.json()
+    monitoring_id = draft_monitoring()
+
+    requests.patch("{}+{}+{}".format(url, '/', monitoring_id), data=decision(documents), headers=headers)
+    requests.patch("{}+{}+{}".format(url, '/', monitoring_id), data=monitoring_status('active'), headers=headers)
+
+    return monitoring_id
 
 
 # New monitoring + 5 posts
@@ -68,4 +69,4 @@ def close_monitoring():
     resp = requests.patch(url + '/' + monitoring_id, data=json.dumps(decline), headers=headers)
     return resp.text
 
-print(close_monitoring())
+print(active_monitoring())
