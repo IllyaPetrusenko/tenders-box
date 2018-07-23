@@ -21,18 +21,18 @@ def draft_monitoring():
 # New monitoring + activation
 def active_monitoring():
 
-    monitoring_id = '3f2eb94423a64c279fa5657a8fa42fa0'
-    requests.patch(url + '/' + monitoring_id[0], data=json.dumps(decision(documents)), headers=headers)
-    resp = requests.patch(url + '/' + monitoring_id[0], data=json.dumps(activate), headers=headers)
-    return resp.json()['data']['id']
+    monitoring_id = '89fdc6a2aa714cfbb26ae70c1d5a9507'
+    requests.patch(url + '/' + monitoring_id, data=json.dumps(decision(documents)), headers=headers)
+    resp = requests.patch(url + '/' + monitoring_id, data=json.dumps(activate), headers=headers)
+    return resp.json()
 
 
 # New monitoring + 5 posts
 def post_monitoring():
 
-    monitoring_id = active_monitoring()
+    monitoring_id = '89fdc6a2aa714cfbb26ae70c1d5a9507'
     for i in range(5):
-        requests.post(url + '/' + monitoring_id + '/' + 'posts', data=json.dumps(msg), headers=headers)
+        requests.post(url + '/' + monitoring_id + '/posts', data=json.dumps(msg), headers=headers)
     return monitoring_id
 
 
@@ -40,7 +40,7 @@ def post_monitoring():
 def make_conclusion_and_adress():
 
     monitoring_id = post_monitoring()
-    requests.patch(url + '/' + monitoring_id, data=json.dumps(conclusion(documents)), headers=headers)
+    requests.patch(url + '/' + monitoring_id, data=json.dumps(conclusion(documents, True)), headers=headers)
     requests.patch(url + '/' + monitoring_id, data=json.dumps(adressed), headers=headers)
     return monitoring_id
 
@@ -61,11 +61,11 @@ def complete_monitoring():
 
 # New monitoring ---> activate ----> declined ---> closed
 def close_monitoring():
-    monitoring_id = active_monitoring()
-    requests.patch(url + monitoring_id, data=json.dumps(conclusion), headers=headers)
+    monitoring_id = '89fdc6a2aa714cfbb26ae70c1d5a9507'
+    requests.patch(url + '/' + monitoring_id, data=json.dumps(conclusion(documents, False)), headers=headers)
     # requests.patch(url + monitoring_id,
     #                data=json.dumps(eliminationResolution), headers=headers)
     resp = requests.patch(url + '/' + monitoring_id, data=json.dumps(decline), headers=headers)
-    return resp.json()
+    return resp.text
 
-print(draft_monitoring())
+print(close_monitoring())

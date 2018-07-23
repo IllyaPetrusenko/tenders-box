@@ -17,7 +17,7 @@ headers = {
     'Postman-Token': "0acb6f32-d856-44f4-9234-77c46981366b"
     }
 
-tender_id = 'bc25258a6a404224976b26e7b670b5a9'
+tender_id = 'f274f3100d8f438ea8de5542748a757c'
 
 payload = {
   "data": {
@@ -85,23 +85,44 @@ msg = {
 }
 
 
-def conclusion(documents):
+def conclusion(violation, documents = 0):
+    if documents != 0:
+        for i in ran
+    if violation is True:
 
-    conclusion_cont = {
-      "data": {
-        "conclusion": {
-          "violationType": [
-            "documentsForm",
-            "corruptionAwarded"
-          ],
-          "description": "Ashes, ashes, we all fall down",
-          "stringsAttached": "Pocket full of posies",
-          "auditFinding": "Ring around the rosies",
-          "violationOccurred": True,
-          "documents": documents
+        conclusion_cont = {
+          "data": {
+            "conclusion": {
+              "violationType": [
+                "documentsForm",
+                "corruptionAwarded"
+              ],
+              "description": "Ashes, ashes, we all fall down",
+              "stringsAttached": "Pocket full of posies",
+              "auditFinding": "Ring around the rosies",
+              "violationOccurred": True,
+              "documents": documents
+            }
+          }
         }
-      }
-    }
+
+    elif violation is False:
+
+        conclusion_cont = {
+            "data": {
+                "conclusion": {
+                    "violationType": [
+                        "documentsForm",
+                        "corruptionAwarded"
+                    ],
+                    "description": "Ashes, ashes, we all fall down",
+                    "stringsAttached": "Pocket full of posies",
+                    "auditFinding": "Ring around the rosies",
+                    "violationOccurred": False,
+                    "documents": documents
+                }
+            }
+        }
     return conclusion_cont
 
 adressed = {
@@ -148,3 +169,6 @@ eliminationResolution = {
     }
   }
 }
+
+def monitoring_status(status):
+
