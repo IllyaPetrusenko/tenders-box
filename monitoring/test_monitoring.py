@@ -32,7 +32,7 @@ def post_monitoring():
 
     monitoring_id = active_monitoring()
     for i in range(5):
-        requests.post(url + monitoring_id + '/' + 'posts', data=json.dumps(msg), headers=headers)
+        requests.post(url + '/' + monitoring_id + '/' + 'posts', data=json.dumps(msg), headers=headers)
     return monitoring_id
 
 
@@ -40,16 +40,15 @@ def post_monitoring():
 def make_conclusion_and_adress():
 
     monitoring_id = post_monitoring()
-    requests.patch(url + monitoring_id, data=json.dumps(conclusion(documents)), headers=headers)
-    requests.patch(url + monitoring_id, data=json.dumps(adressed), headers=headers)
+    requests.patch(url + '/' + monitoring_id, data=json.dumps(conclusion(documents)), headers=headers)
+    requests.patch(url + '/' + monitoring_id, data=json.dumps(adressed), headers=headers)
     return monitoring_id
 
 
 # New monitoring ---> activate ----> addressed ---> stopped
 def stop_monitoring():
     monitoring_id = make_conclusion_and_adress()
-    resp = requests.patch(url + '/' + monitoring_id,
-                          data=json.dumps(stopped), headers=headers)
+    resp = requests.patch(url + '/' + monitoring_id, data=json.dumps(stopped), headers=headers)
     return monitoring_id
 
 
