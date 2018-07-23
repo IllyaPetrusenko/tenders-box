@@ -1,11 +1,15 @@
 import requests, json
 from monitoring.test_data import *
-from faker import Faker
 
-fake_data = Faker(UK_uk)
-# 1. Create file object, than upload this file to document service.(Faker, requests.....) Разобрать как добавлять файлы в
-# ЦБД
-# New draft only
+
+def send_file_to_doc_service():
+
+    req = requests.post(doc_service_url, headers=headers1, files=files)
+    req = req.json()
+    return req['data']
+
+documents = [send_file_to_doc_service()]
+
 def draft_monitoring():
 
     monitoring = requests.post(url, data=json.dumps(payload), headers=headers)
@@ -18,8 +22,8 @@ def draft_monitoring():
 def active_monitoring():
 
     monitoring_id = draft_monitoring()
-    requests.patch(url + monitoring_id[0], data=json.dumps(payload2), headers=headers)
-    resp = requests.patch(url + monitoring_id[0], data=json.dumps(activate), headers=headers)
+    requests.patch(url + '/' + monitoring_id[0], data=json.dumps(decision(documents)), headers=headers)
+    resp = requests.patch(url + '/' + monitoring_id[0], data=json.dumps(activate), headers=headers)
     return resp.json()['data']['id']
 
 
@@ -36,7 +40,7 @@ def post_monitoring():
 def make_conclusion_and_adress():
 
     monitoring_id = post_monitoring()
-    requests.patch(url + monitoring_id, data=json.dumps(conclusion), headers=headers)
+    requests.patch(url + monitoring_id, data=json.dumps(conclusion(documents)), headers=headers)
     requests.patch(url + monitoring_id, data=json.dumps(adressed), headers=headers)
     return monitoring_id
 
@@ -65,4 +69,4 @@ def close_monitoring():
     resp = requests.patch(url + '/' + monitoring_id, data=json.dumps(decline), headers=headers)
     return resp.json()
 
-print(post_monitoring())
+print(make_conclusion_and_adress())

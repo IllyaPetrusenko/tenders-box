@@ -1,3 +1,12 @@
+from monitoring.key import *
+
+headers1 = {'authorization': 'Basic {}'.format(ds_key)}
+
+doc_service_url = 'https://upload.docs-sandbox.openprocurement.org/upload'
+
+
+files = {'file': open('/home/qa1/Изображения/146796919019803402.png', 'rb')}
+
 
 url = 'https://audit-api-sandbox.prozorro.gov.ua/api/2.4/monitorings'
 
@@ -8,7 +17,7 @@ headers = {
     'Postman-Token': "0acb6f32-d856-44f4-9234-77c46981366b"
     }
 
-tender_id = 'a11bc34e562844c597cbbd3b53b7cbf6'
+tender_id = 'bc25258a6a404224976b26e7b670b5a9'
 
 payload = {
   "data": {
@@ -49,14 +58,18 @@ payload = {
   }
 }
 
-payload2 = {
-  "data": {
-    "decision": {
-      "date": "2018-01-02T01:05:00",
-      "description": "Опис підстав для здійсненнjjjjjjjjjjjjjjjjjjjjjjjjя моніторинг"
+
+def decision(documents):
+    payload2 = {
+      "data": {
+        "decision": {
+          "date": "2018-01-02T01:05:00",
+          "description": "Опис підстав для здійсненнjjjjjjjjjjjjjjjjjjjjjjjjя моніторинг",
+          "documents": documents
+        }
+      }
     }
-  }
-}
+    return payload2
 
 activate = {
   "data": {
@@ -72,21 +85,24 @@ msg = {
 }
 
 
-conclusion = {
-  "data": {
-    "conclusion": {
-      "violationType": [
-        "documentsForm",
-        "corruptionAwarded"
-      ],
-      "description": "Ashes, ashes, we all fall down",
-      "stringsAttached": "Pocket full of posies",
-      "auditFinding": "Ring around the rosies",
-      "violationOccurred": True
-    }
-  }
-}
+def conclusion(documents):
 
+    conclusion_cont = {
+      "data": {
+        "conclusion": {
+          "violationType": [
+            "documentsForm",
+            "corruptionAwarded"
+          ],
+          "description": "Ashes, ashes, we all fall down",
+          "stringsAttached": "Pocket full of posies",
+          "auditFinding": "Ring around the rosies",
+          "violationOccurred": True,
+          "documents": documents
+        }
+      }
+    }
+    return conclusion_cont
 
 adressed = {
   "data": {
