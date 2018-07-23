@@ -86,8 +86,7 @@ msg = {
 
 
 def conclusion(violation, documents = 0):
-    if documents != 0:
-        for i in ran
+
     if violation is True:
 
         conclusion_cont = {
@@ -172,3 +171,11 @@ eliminationResolution = {
 
 def monitoring_status(status):
 
+    mon_status = {
+  "data": {
+    "status": status
+  }
+}
+    return mon_status
+
+print(monitoring_status('active'))
