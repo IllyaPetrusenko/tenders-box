@@ -1,3 +1,6 @@
+
+url = 'https://audit-api-sandbox.prozorro.gov.ua/api/2.4/monitorings'
+
 headers = {
     'Authorization': "Basic OWIzYWFhZmJhOWZlNGY0Yzk1YzNiZTNlMWZlYWFlMzE6",
     'Content-Type': "application/json",
