@@ -21,7 +21,7 @@ def draft_monitoring():
 # New monitoring + activation
 def active_monitoring():
 
-    monitoring_id = draft_monitoring()
+    monitoring_id = '3f2eb94423a64c279fa5657a8fa42fa0'
     requests.patch(url + '/' + monitoring_id[0], data=json.dumps(decision(documents)), headers=headers)
     resp = requests.patch(url + '/' + monitoring_id[0], data=json.dumps(activate), headers=headers)
     return resp.json()['data']['id']
@@ -68,4 +68,4 @@ def close_monitoring():
     resp = requests.patch(url + '/' + monitoring_id, data=json.dumps(decline), headers=headers)
     return resp.json()
 
-print(make_conclusion_and_adress())
+print(draft_monitoring())
