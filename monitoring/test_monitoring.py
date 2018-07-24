@@ -20,12 +20,11 @@ def draft_monitoring():
 # New monitoring + activation
 def active_monitoring():
 
-    monitoring_id = draft_monitoring()
+    monitoring_id = '98a24b2521af41b7916008a0a545fb01'
+    requests.patch("{}/{}".format(url, monitoring_id), data=decision(documents), headers=headers)
+    resp = requests.patch("{}/{}".format(url, monitoring_id), data=monitoring_status('active'), headers=headers)
 
-    requests.patch("{}+{}+{}".format(url, '/', monitoring_id), data=decision(documents), headers=headers)
-    requests.patch("{}+{}+{}".format(url, '/', monitoring_id), data=monitoring_status('active'), headers=headers)
-
-    return monitoring_id
+    return resp.text
 
 
 # New monitoring + 5 posts

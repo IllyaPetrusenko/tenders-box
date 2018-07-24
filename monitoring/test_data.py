@@ -15,7 +15,7 @@ headers = {
     'Postman-Token': "0acb6f32-d856-44f4-9234-77c46981366b"
     }
 
-tender_id = 'f274f3100d8f438ea8de5542748a757c'
+tender_id = '2f72e85831814edd9b546e606d60b831'
 
 payload = {
   "data": {
@@ -131,8 +131,6 @@ eliminationResolution = {
   }
 }
 
-
-#status = [, 'stopped']
 
 def monitoring_status(status):
 
