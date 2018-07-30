@@ -2,13 +2,16 @@ import requests, json
 from monitoring.test_data import *
 from monitoring.files_mon import *
 
+
 def send_file_to_doc_service():
 
     req = requests.post(doc_service_url, headers=headers1, files=files)
     req = req.json()
     return req['data']
 
+
 documents = [send_file_to_doc_service()]
+
 
 def draft_monitoring():
 
@@ -68,4 +71,3 @@ def close_monitoring():
     resp = requests.patch(url + '/' + monitoring_id, data=json.dumps(decline), headers=headers)
     return resp.text
 
-print(active_monitoring())
