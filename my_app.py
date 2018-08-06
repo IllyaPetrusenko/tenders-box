@@ -14,9 +14,10 @@ def monitorings():
     return render_template('monitorings.html')
 
 
-@app.route('/monitorings/new_draft', methods=['GET'])
+@app.route('/monitorings/new_draft', methods=['GET', 'POST'])
 def new_monitoring():
     monitoring_info = Monitoring.draft_monitoring()
+    print(type(monitoring_info))
     return monitoring_info
 
 if __name__ == '__main__':

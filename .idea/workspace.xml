@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58e50eaa-dca8-4264-9fd8-e64abf01f950" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitoring/key.py" beforeDir="false" afterPath="$PROJECT_DIR$/monitoring/key.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitoring/test_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/monitoring/test_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitoring/test_monitoring.py" beforeDir="false" afterPath="$PROJECT_DIR$/monitoring/test_monitoring.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/monitorings.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/monitorings.html" afterDir="false" />
     </list>
@@ -53,17 +49,17 @@
         <counts>
           <entry key="css" value="37" />
           <entry key="gitignore" value="98" />
-          <entry key="html" value="582" />
-          <entry key="py" value="2795" />
-          <entry key="txt" value="19" />
+          <entry key="html" value="607" />
+          <entry key="py" value="2855" />
+          <entry key="txt" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="37" />
-          <entry key="HTML" value="582" />
-          <entry key="PLAIN_TEXT" value="117" />
-          <entry key="Python" value="2795" />
+          <entry key="HTML" value="607" />
+          <entry key="PLAIN_TEXT" value="118" />
+          <entry key="Python" value="2855" />
         </counts>
       </usages-collector>
     </session>
@@ -88,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/monitorings.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+            <state relative-caret-position="264">
+              <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -104,7 +100,7 @@
               <caret line="1" column="40" lean-forward="true" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
-                <marker date="1533564478146" expanded="true" signature="409:438" ph="..." />
+                <marker date="1533566614359" expanded="true" signature="442:471" ph="..." />
               </folding>
             </state>
           </provider>
@@ -151,7 +147,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/monitoring/test_data.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
@@ -190,10 +186,10 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/decorator_pr1.py" />
         <option value="$PROJECT_DIR$/monitoring/key.py" />
-        <option value="$PROJECT_DIR$/templates/monitorings.html" />
-        <option value="$PROJECT_DIR$/my_app.py" />
         <option value="$PROJECT_DIR$/monitoring/test_monitoring.py" />
         <option value="$PROJECT_DIR$/monitoring/test_data.py" />
+        <option value="$PROJECT_DIR$/my_app.py" />
+        <option value="$PROJECT_DIR$/templates/monitorings.html" />
       </list>
     </option>
   </component>
@@ -226,6 +222,10 @@
               <item name="tenders-box" type="b2602c69:ProjectViewProjectNode" />
               <item name="tenders-box" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tenders-box" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -417,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532971979556</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="from work -6">
+      <created>1533564743655</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1533564743655</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -433,6 +440,25 @@
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13548641" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32931727" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.92910594" visible="true" weight="0.29927006" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4978338" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32919708" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49980307" weight="0.32919708" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49940923" weight="0.32919708" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.070894055" side_tool="true" weight="0.29927006" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32919708" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13548641" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -450,7 +476,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -460,7 +486,8 @@
     <MESSAGE value="from work -3" />
     <MESSAGE value="from work -4" />
     <MESSAGE value="from work -5" />
-    <option name="LAST_COMMIT_MESSAGE" value="from work -5" />
+    <MESSAGE value="from work -6" />
+    <option name="LAST_COMMIT_MESSAGE" value="from work -6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -553,24 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/monitorings.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my_app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="40" lean-forward="true" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-            <marker date="1533564478146" expanded="true" signature="409:438" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/monitoring/test_monitoring.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
@@ -590,6 +599,24 @@
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="40" lean-forward="true" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+            <marker date="1533566614359" expanded="true" signature="442:471" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/monitorings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
         </state>
       </provider>
     </entry>
