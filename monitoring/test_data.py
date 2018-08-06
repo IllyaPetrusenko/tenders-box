@@ -9,7 +9,7 @@ doc_service_url = 'https://upload.docs-sandbox.openprocurement.org/upload'
 url = 'https://audit-api-sandbox.prozorro.gov.ua/api/2.4/monitorings'
 
 headers = {
-    'Authorization': "Basic OWIzYWFhZmJhOWZlNGY0Yzk1YzNiZTNlMWZlYWFlMzE6",
+    'Authorization': "Basic OTk4N2I1NTE3MTBiNDQ2OTliZjJhZDEwMTg4YmNmNjU6Og==",
     'Content-Type': "application/json",
     'Cache-Control': "no-cache",
     'Postman-Token': "0acb6f32-d856-44f4-9234-77c46981366b"

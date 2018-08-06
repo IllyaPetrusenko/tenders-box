@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from monitoring.test_monitoring import *
 
 app = Flask(__name__)
 
@@ -11,6 +12,12 @@ def index():
 @app.route('/monitorings')
 def monitorings():
     return render_template('monitorings.html')
+
+
+@app.route('/monitorings/new_draft', methods=['GET'])
+def new_monitoring():
+    monitoring_info = Monitoring.draft_monitoring()
+    return monitoring_info
 
 if __name__ == '__main__':
     app.run(debug=True)
