@@ -15,7 +15,7 @@ headers = {
     'Postman-Token': "0acb6f32-d856-44f4-9234-77c46981366b"
     }
 
-tender_id = '2f72e85831814edd9b546e606d60b831'
+tender_id =
 
 payload = {
   "data": {

@@ -1,3 +1,19 @@
 .header {
     background: red;
 }
+
+.info-block{
+    background: green;
+    float: left;
+}
+
+.input-info-block{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.p-info-block{
+    margin-left: 10px;
+    margin-right: 10px;
+}
